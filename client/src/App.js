@@ -22,7 +22,7 @@ function App() {
       <CssBaseline />
       <div className="App">
         <Nav toggle={handleSidebarOpen}/>
-        <Sidebar open={openSidebar} />
+        <Sidebar open={openSidebar} toggle={handleSidebarOpen}/>
       </div>
     </ThemeProvider>
   );

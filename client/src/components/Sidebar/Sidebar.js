@@ -1,28 +1,27 @@
 import React from 'react';
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
-import ListItemAvatar from "@material-ui/core/ListItemAvatar";
-import { Divider, Typography, Box } from '@material-ui/core';
+import SidebarListItem from "../SidebarListItem/SidebarListItem";
+import { Box, Typography, Divider } from "@material-ui/core";
+
 
 export default function Sidebar(props) {
+
+
+    const handleItemClick = () => {
+        props.toggle();
+    }
     return (
         <Drawer open={props.open}>
-            <Box m={2}>
+            <Box m={1}>
                 <Typography variant="h4">Shows</Typography>
             </Box>
-            <Divider/>
+            <Divider />
             <List>
-                <ListItem>
-                    <ListItemAvatar />
-                    <span><ListItemText>Ark After Dark</ListItemText></span>
-                </ListItem>
-                <Divider />
-                <ListItem>
-                    <ListItemAvatar />
-                    <span><ListItemText>Fields of Plenty</ListItemText></span>
-                </ListItem>
+                <SidebarListItem onClick={handleItemClick} text="James World Tonight"/>
+                <SidebarListItem text="Ark After Dark"/>
+                <SidebarListItem text="Fields of Plenty"/>
+   
             </List>
 
         </Drawer>
