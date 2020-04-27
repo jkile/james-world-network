@@ -5,10 +5,10 @@ export default function About() {
     return (
         <Box m={1}>
             <Card elevation={3}>
-                <Box p={2} bgcolor="primary.dark">
+                <Box p={2}>
                     <Typography variant="h4" component="h2">
-                        <Box textAlign="left">
-                            About
+                        <Box textAlign="left" fontWeight={700}>
+                            ABOUT
                         </Box>
                     </Typography>
                     <Typography variant="p" component="p">

@@ -7,7 +7,7 @@ export default function LiveFeed() {
             <Paper>
                 <Box p={2}>
                     <Typography variant="h4" component="h2">
-                        <Box textAlign="left" fontWeight={700}>Feed</Box>
+                        <Box textAlign="left" fontWeight={700}>FEED</Box>
                     </Typography>
                 </Box>
             </Paper>

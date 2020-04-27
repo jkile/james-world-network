@@ -10,7 +10,7 @@ export default function SidebarListItem(props) {
             <ListItemAvatar>
                 <Avatar />
             </ListItemAvatar>
-            <ListItemText><Box color="primary.light">{props.text}</Box></ListItemText>
+            <ListItemText><Box>{props.text}</Box></ListItemText>
         </ListItem>
     )
 }

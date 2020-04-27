@@ -15,7 +15,7 @@ export default function Home(props) {
                 <Grid item xs={12}>
                     <img className={styles.headerLogo} src={logo} alt="James World Network Logo" />
                 </Grid>
-                <Grid container direction="row" justify="center" align="center" md={7} lg={7} lg={7}>
+                <Grid container direction="row" justify="center" align="center" md={7} lg={7} xl={7}>
                     <Grid item xs={12}>
                         <Box m={1}>
                             <Paper elevation={3}>
@@ -28,7 +28,7 @@ export default function Home(props) {
                     <Grid item xs={12}>
                         <About />
                     </Grid>
-                    
+
                 </Grid>
                 <Grid item xs={12} sm={12} md={4} lg={4} xl={3}>
                     <UpNext isNotMobile={props.isNotMobile} />
