@@ -10,9 +10,10 @@ export default function Nav(props) {
     return (
         <AppBar position="static" color="inherit">
             <Toolbar>
-                <IconButton edge="start" color="inherit" aria-label="menu" onClick={props.toggle}>
-                    <MenuIcon />
-                </IconButton>
+                {!props.isNotMobile &&
+                    <IconButton edge="start" color="inherit" aria-label="menu" onClick={props.toggle}>
+                        <MenuIcon />
+                    </IconButton>}
             </Toolbar>
         </AppBar>
     )

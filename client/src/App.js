@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import Nav from "./components/Nav/Nav";
 import Sidebar from "./components/Sidebar/Sidebar";
 import { ThemeProvider } from "@material-ui/core/styles";
-import { TwitchStream } from "react-twitch-stream";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import darkTheme from "./theme"
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import darkTheme from "./theme";
+import Home from "./pages/Home/Home";
 
 import './App.scss';
 import "./reset.scss"
@@ -12,17 +13,19 @@ import "./reset.scss"
 
 function App() {
   const [openSidebar, setSidebar] = useState(false);
+  const isNotMobile = useMediaQuery("(min-width: 960px)");
 
-  const handleSidebarOpen = () => {
-    setSidebar(true);
+  const handleSidebarToggle = () => {
+    setSidebar(!openSidebar);
   }
 
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <div className="App">
-        <Nav toggle={handleSidebarOpen}/>
-        <Sidebar open={openSidebar} toggle={handleSidebarOpen}/>
+        <Nav toggle={handleSidebarToggle} isNotMobile={isNotMobile}/>
+        <Sidebar open={openSidebar} toggle={handleSidebarToggle} isNotMobile={isNotMobile}/>
+        <Home isNotMobile={isNotMobile}/>
       </div>
     </ThemeProvider>
   );

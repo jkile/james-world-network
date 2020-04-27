@@ -1,0 +1,16 @@
+.main{
+    @media (min-width: 960px){
+        position: relative;
+        left: 16rem;
+        width: calc(100vw - 16rem)
+    }
+}
+.headerLogo{
+    max-width: 22rem;
+    margin: auto;
+    max-height: 15rem;
+    @media (min-width: 960px){
+        max-width: 35rem;
+        max-height: 20rem;
+    }
+}
