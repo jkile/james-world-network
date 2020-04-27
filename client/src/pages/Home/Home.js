@@ -12,10 +12,10 @@ export default function Home(props) {
     return (
         <div className={styles.main}>
             <Grid container direction="row" justify="center" align="center">
-                <Grid item xs={12}>
+            <Grid item xs={12}>
                     <img className={styles.headerLogo} src={logo} alt="James World Network Logo" />
                 </Grid>
-                <Grid container direction="row" justify="center" align="center" md={7} lg={7} xl={7}>
+                <Grid container direction="row" justify="center" align="center" md={8} lg={8} xl={8}>
                     <Grid item xs={12}>
                         <Box m={1}>
                             <Paper elevation={3}>
@@ -30,7 +30,7 @@ export default function Home(props) {
                     </Grid>
 
                 </Grid>
-                <Grid item xs={12} sm={12} md={4} lg={4} xl={3}>
+                <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
                     <UpNext isNotMobile={props.isNotMobile} />
                     <LiveFeed />
                 </Grid>

@@ -8,7 +8,7 @@ import IconButton from "@material-ui/core/IconButton";
 export default function Nav(props) {
 
     return (
-        <AppBar position="static" color="inherit">
+        <AppBar position="sticky" color="inherit">
             <Toolbar>
                 {!props.isNotMobile &&
                     <IconButton edge="start" color="inherit" aria-label="menu" onClick={props.toggle}>

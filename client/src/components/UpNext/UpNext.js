@@ -5,7 +5,7 @@ export default function UpNext(props) {
 
 
     return (
-        <Box m={1} >
+        <Box m={1}>
             <Paper elevation={3}>
                 <Box p={2} overflow="auto" maxHeight="38rem">
                     <Typography variant="h4">

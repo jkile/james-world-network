@@ -6,7 +6,7 @@ import { Avatar, Box } from '@material-ui/core';
 
 export default function SidebarListItem(props) {
     return (
-        <ListItem button onClick={props.onClick} component="button" divider>
+        <ListItem button onClick={props.onClick} component="button">
             <ListItemAvatar>
                 <Avatar />
             </ListItemAvatar>

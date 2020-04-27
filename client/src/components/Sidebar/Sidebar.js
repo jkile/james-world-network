@@ -29,11 +29,11 @@ export default function Sidebar(props) {
                 </Box>
             </Box>
             <List>
-                <Divider />
                 <SidebarListItem onClick={handleItemClick} text="James World Tonight" />
                 <SidebarListItem onClick={handleItemClick} text="Ark After Dark" />
                 <SidebarListItem onClick={handleItemClick} text="Fields of Plenty" />
                 <SidebarListItem onClick={handleItemClick} text="Goodnight Nate" />
+                <SidebarListItem onClick={handleItemClick} text="Escape from the Tavern" />
             </List>
         </div>
     );
