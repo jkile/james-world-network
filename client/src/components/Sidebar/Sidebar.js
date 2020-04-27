@@ -15,7 +15,7 @@ export default function Sidebar(props) {
     const drawer = (
         <div>
             <Typography variant="h4" component="h2">
-                <Box ml={2} mt={2} mb={3} fontWeight={700} color="primary.light">
+                <Box ml={2} mt={2} mb={3} fontWeight={700} color="secondary.light">
                     Shows
                         </Box>
             </Typography>
@@ -30,13 +30,13 @@ export default function Sidebar(props) {
 
     return (
         <div>
-            <Hidden mdUp>
+            <Hidden lgUp>
 
                 <Drawer open={props.open} variant="temporary">
                     {drawer}
                 </Drawer>
             </Hidden>
-            <Hidden smDown>
+            <Hidden mdDown>
                 <Drawer open variant="permanent">
                     {drawer}
                 </Drawer>

@@ -13,7 +13,7 @@ import "./reset.scss"
 
 function App() {
   const [openSidebar, setSidebar] = useState(false);
-  const isNotMobile = useMediaQuery("(min-width: 960px)");
+  const isNotMobile = useMediaQuery("(min-width: 1280px)");
 
   const handleSidebarToggle = () => {
     setSidebar(!openSidebar);

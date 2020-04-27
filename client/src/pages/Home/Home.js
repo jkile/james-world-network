@@ -15,11 +15,11 @@ export default function Home(props) {
                 <Grid item xs={12}>
                     <img className={styles.headerLogo} src={logo} alt="James World Network Logo" />
                 </Grid>
-                <Grid container direction="row" justify="center" align="center" md={7} lg={7} lg={8}>
+                <Grid container direction="row" justify="center" align="center" md={7} lg={7} lg={7}>
                     <Grid item xs={12}>
                         <Box m={1}>
                             <Paper elevation={3}>
-                                <Box p={1} maxHeight="45rem">
+                                <Box p={1}>
                                     <TwitchStream channelName="jamesworldtv" allowFullScreen autoplay muted />
                                 </Box>
                             </Paper>
@@ -28,11 +28,9 @@ export default function Home(props) {
                     <Grid item xs={12}>
                         <About />
                     </Grid>
-                    <Grid item xs={12} sm={12} md={4}>
-
-                    </Grid>
+                    
                 </Grid>
-                <Grid item xs={12} sm={12} md={5} lg={4} xl={3}>
+                <Grid item xs={12} sm={12} md={4} lg={4} xl={3}>
                     <UpNext isNotMobile={props.isNotMobile} />
                     <LiveFeed />
                 </Grid>
