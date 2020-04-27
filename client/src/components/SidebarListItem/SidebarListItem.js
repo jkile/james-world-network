@@ -2,15 +2,15 @@ import React from 'react';
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
-import { Avatar } from '@material-ui/core';
+import { Avatar, Box } from '@material-ui/core';
 
 export default function SidebarListItem(props) {
     return (
-        <ListItem button onClick={props.onClick} component="button">
+        <ListItem button onClick={props.onClick} component="button" divider>
             <ListItemAvatar>
                 <Avatar />
             </ListItemAvatar>
-            <ListItemText>{props.text}</ListItemText>
+            <ListItemText><Box color="primary.light">{props.text}</Box></ListItemText>
         </ListItem>
     )
 }

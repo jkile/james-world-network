@@ -3,6 +3,7 @@ import Nav from "./components/Nav/Nav";
 import Sidebar from "./components/Sidebar/Sidebar";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import Box from "@material-ui/core/Box";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import darkTheme from "./theme";
 import Home from "./pages/Home/Home";
@@ -22,11 +23,11 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <div className="App">
+      <Box >
         <Nav toggle={handleSidebarToggle} isNotMobile={isNotMobile}/>
         <Sidebar open={openSidebar} toggle={handleSidebarToggle} isNotMobile={isNotMobile}/>
         <Home isNotMobile={isNotMobile}/>
-      </div>
+      </Box>
     </ThemeProvider>
   );
 }

@@ -20,7 +20,7 @@ export default function Home(props) {
                         <Box m={1}>
                             <Paper elevation={3}>
                                 <Box p={1}>
-                                    <TwitchStream channelName="jamesworldtv" allowFullScreen autoplay muted />
+                                    <TwitchStream channelName="jamesworldnetwork" allowFullScreen autoplay muted />
                                 </Box>
                             </Paper>
                         </Box>
