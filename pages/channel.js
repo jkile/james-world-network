@@ -14,8 +14,6 @@ function Channel({ stories }) {
     const [openSidebar, setSidebar] = useState(false);
     const isNotMobile = useMediaQuery("(min-width: 1280px)");
 
-    
-
     const handleSidebarToggle = () => {
         setSidebar(!openSidebar);
     }
@@ -26,7 +24,7 @@ function Channel({ stories }) {
             <Box >
                 <Nav toggle={handleSidebarToggle} isNotMobile={isNotMobile} />
                 <Sidebar open={openSidebar} toggle={handleSidebarToggle} isNotMobile={isNotMobile} />
-                <Channels  />
+                <Channels  channel={stories.stories[0]}/>
             </Box>
         </ThemeProvider>
     );
