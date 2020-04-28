@@ -7,10 +7,12 @@ import styles from "./Home.module.scss";
 import LiveFeed from "../../components/LiveFeed/LiveFeed";
 
 
+
 export default function Home(props) {
     return (
         <div className={styles.main}>
             <Grid container direction="row" justify="center" align="center">
+                <img src="./assets/JMWRODMUSICNEARFINAL.png" alt="Jame World Network Logo"/>
                 <Grid container direction="row" justify="center" align="center" md={8} lg={8} xl={8}>
                     <Grid item xs={12}>
                         <Box m={1}>
