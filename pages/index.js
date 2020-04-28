@@ -7,9 +7,10 @@ import Box from "@material-ui/core/Box";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import darkTheme from "../styles/theme";
 import Home from "../components/Home/Home";
+import Axios from "axios";
 
 
-function App() {
+function App({ stories }) {
   const [openSidebar, setSidebar] = useState(false);
   const isNotMobile = useMediaQuery("(min-width: 1280px)");
 
@@ -22,11 +23,22 @@ function App() {
       <CssBaseline />
       <Box >
         <Nav toggle={handleSidebarToggle} isNotMobile={isNotMobile}/>
-        <Sidebar open={openSidebar} toggle={handleSidebarToggle} isNotMobile={isNotMobile}/>
+        <Sidebar open={openSidebar} toggle={handleSidebarToggle} isNotMobile={isNotMobile} channels={stories.stories}/>
         <Home isNotMobile={isNotMobile}/>
       </Box>
     </ThemeProvider>
   );
+}
+
+export async function getStaticProps() {
+  const resAll = await Axios.get(`https://api.storyblok.com/v1/cdn/stories?token=${process.env.API_TOKEN}`);
+  const stories = resAll.data
+
+  return {
+      props: {
+          stories
+      }
+  }
 }
 
 export default App;
