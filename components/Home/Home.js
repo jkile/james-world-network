@@ -11,7 +11,7 @@ export default function Home(props) {
     return (
         <div className={styles.main}>
             <Grid container direction="row" justify="center" align="center">
-
+                
                 <Grid container direction="row" justify="center" align="center" md={8} lg={8} xl={8}>
                     <Grid item xs={12}>
                         <Box m={1}>
