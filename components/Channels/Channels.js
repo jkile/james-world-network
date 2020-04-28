@@ -25,12 +25,12 @@ export default function Channels(props) {
                                 </Box>
                                 <Typography variant="h4" component="h2">
                                     <Box fontWeight={700}>
-                                        {props.channelInfo.title}
+                                        
                                     </Box>
                                 </Typography>
                             </Box>
                             <Box p={2}>
-                                <YouTube id={props.channelInfo.video_url} />
+                                <YouTube id="" />
                             </Box>
                         </Paper>
                     </Box>
@@ -47,7 +47,7 @@ export default function Channels(props) {
                                     </Typography>
                                     <Typography variant="p" component="p">
                                         <Box textAlign="left">
-                                            {props.channelInfo.about}
+                                            
                                         </Box>  
                                     </Typography>
                                 </Box>
