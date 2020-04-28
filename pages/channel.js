@@ -14,6 +14,8 @@ function Channel({ stories }) {
     const [openSidebar, setSidebar] = useState(false);
     const isNotMobile = useMediaQuery("(min-width: 1280px)");
 
+    console.log(stories.stories)
+
     const handleSidebarToggle = () => {
         setSidebar(!openSidebar);
     }
@@ -30,7 +32,7 @@ function Channel({ stories }) {
     );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const resAll = await Axios.get(`https://api.storyblok.com/v1/cdn/stories?token=${process.env.API_TOKEN}`);
     const stories = resAll.data
 

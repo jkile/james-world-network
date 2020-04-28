@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Button, Paper, Typography, Grid } from "@material-ui/core";
 import { TwitchStream } from "react-twitch-stream";
 import UpNext from "../../components/UpNext/UpNext";
@@ -9,6 +9,13 @@ import LiveFeed from "../../components/LiveFeed/LiveFeed";
 
 
 export default function Home(props) {
+
+    const [loaded, isLoaded] = useState(false);
+
+    useEffect(() => {
+        isLoaded(true);
+    },[])
+
     return (
         <div className={styles.main}>
             <Grid container direction="row" justify="center" align="center">
@@ -18,7 +25,7 @@ export default function Home(props) {
                         <Box m={1}>
                             <Paper elevation={3}>
                                 <Box p={1}>
-                                    <TwitchStream channelName="jamesworldnetwork" allowFullScreen autoplay muted />
+                                   {loaded && <TwitchStream channelName="jamesworldnetwork" allowFullScreen autoplay muted />}
                                 </Box>
                             </Paper>
                         </Box>
