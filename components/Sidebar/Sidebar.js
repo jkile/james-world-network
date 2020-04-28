@@ -26,11 +26,11 @@ export default function Sidebar(props) {
                 </Box>
                 </Typography>
                 <Box mr={1} pt={1}>
-                    <IconButton>
-                        <Link href="/">
+                    <Link href="/">
+                        <IconButton>
                             <HomeIcon />
-                        </Link>
-                    </IconButton>
+                        </IconButton>
+                    </Link>
                 </Box>
             </Box>
             <List>
