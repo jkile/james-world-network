@@ -4,7 +4,6 @@ import { TwitchStream } from "react-twitch-stream";
 import UpNext from "../../components/UpNext/UpNext";
 import About from "../../components/About/About";
 import styles from "./Home.module.scss";
-import logo from "../../assets/invertedlogo.png";
 import LiveFeed from "../../components/LiveFeed/LiveFeed";
 
 
@@ -12,9 +11,7 @@ export default function Home(props) {
     return (
         <div className={styles.main}>
             <Grid container direction="row" justify="center" align="center">
-            <Grid item xs={12}>
-                    <img className={styles.headerLogo} src={logo} alt="James World Network Logo" />
-                </Grid>
+
                 <Grid container direction="row" justify="center" align="center" md={8} lg={8} xl={8}>
                     <Grid item xs={12}>
                         <Box m={1}>

@@ -1,15 +1,14 @@
+
+
 import React, { useState } from 'react';
-import Nav from "./components/Nav/Nav";
-import Sidebar from "./components/Sidebar/Sidebar";
+import Nav from "../components/Nav/Nav";
+import Sidebar from "../components/Sidebar/Sidebar";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Box from "@material-ui/core/Box";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import darkTheme from "./theme";
-import Home from "./pages/Home/Home";
-
-import './App.scss';
-import "./reset.scss"
+import darkTheme from "../styles/theme";
+import Home from "../components/Home/Home";
 
 
 function App() {
