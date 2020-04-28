@@ -8,7 +8,7 @@ import Axios from 'axios';
 export default function Channels(props) {
 
     useEffect(() => {
-        //console.log(props)
+        console.log(props)
     }, [])
 
     return (
@@ -25,12 +25,12 @@ export default function Channels(props) {
                                 </Box>
                                 <Typography variant="h4" component="h2">
                                     <Box fontWeight={700}>
-                                        
+                                        {props.channel.content.title}
                                     </Box>
                                 </Typography>
                             </Box>
                             <Box p={2}>
-                                <YouTube id="" />
+                                <YouTube id={props.channel.content.video_url} />
                             </Box>
                         </Paper>
                     </Box>
@@ -47,7 +47,7 @@ export default function Channels(props) {
                                     </Typography>
                                     <Typography variant="p" component="p">
                                         <Box textAlign="left">
-                                            
+                                            {props.channel.content.about}
                                         </Box>  
                                     </Typography>
                                 </Box>
