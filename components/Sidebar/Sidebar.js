@@ -1,6 +1,6 @@
 import React from 'react';
 import Router from 'next/router';
-import Link from "next/Link";
+import Link from "next/link";
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import SidebarListItem from "../SidebarListItem/SidebarListItem";
