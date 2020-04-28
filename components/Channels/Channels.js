@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Grid, Paper, Typography, Box, Avatar } from '@material-ui/core';
 import YouTube from "react-youtube-embed";
 import styles from "./Channels.module.scss";
 import LiveFeed from '../LiveFeed/LiveFeed';
+import Axios from 'axios';
 
-export default function Channels() {
+export default function Channels(props) {
+
+    useEffect(() => {
+        //console.log(props)
+    }, [])
+
     return (
         <div className={styles.main}>
             <Grid container direction="row" justify="center" align="center">
@@ -19,12 +25,12 @@ export default function Channels() {
                                 </Box>
                                 <Typography variant="h4" component="h2">
                                     <Box fontWeight={700}>
-                                        FIELDS OF PLENTY
+                                        {props.channelInfo.title}
                                     </Box>
                                 </Typography>
                             </Box>
                             <Box p={2}>
-                                <YouTube id="qLNeOVaMDvA" />
+                                <YouTube id={props.channelInfo.video_url} />
                             </Box>
                         </Paper>
                     </Box>
@@ -41,7 +47,7 @@ export default function Channels() {
                                     </Typography>
                                     <Typography variant="p" component="p">
                                         <Box textAlign="left">
-                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae voluptatum, sint officia eos laudantium tenetur amet, quasi nisi temporibus maxime beatae perspiciatis vitae, sed pariatur a delectus nam ullam atque ducimus suscipit magnam velit incidunt iure. Corporis aut quaerat sint, iusto doloremque quam maxime optio nostrum atque possimus? Temporibus iste culpa voluptatibus officiis sapiente. Voluptatibus, repudiandae minima dolorum beatae commodi soluta pariatur omnis eos neque veritatis rerum suscipit labore illo blanditiis harum dicta quis inventore laborum a consectetur quaerat aut. Dicta eius, perspiciatis cumque necessitatibus eos officiis, placeat quaerat accusamus laborum error ducimus voluptas labore magnam ullam tempore libero! Maxime.
+                                            {props.channelInfo.about}
                                         </Box>  
                                     </Typography>
                                 </Box>
@@ -57,3 +63,4 @@ export default function Channels() {
         </div>
     )
 }
+
