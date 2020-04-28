@@ -8,7 +8,7 @@ import Axios from 'axios';
 export default function Channels(props) {
 
     useEffect(() => {
-        console.log(props)
+        // console.log(props)
     }, [])
 
     return (
