@@ -14,8 +14,6 @@ function Channel({ stories }) {
     const [openSidebar, setSidebar] = useState(false);
     const isNotMobile = useMediaQuery("(min-width: 1280px)");
 
-
-
     const handleSidebarToggle = () => {
         setSidebar(!openSidebar);
     }
@@ -32,7 +30,7 @@ function Channel({ stories }) {
     );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const resAll = await Axios.get(`https://api.storyblok.com/v1/cdn/stories?token=${process.env.API_TOKEN}`);
     const stories = resAll.data
 
@@ -40,6 +38,15 @@ export async function getServerSideProps() {
         props: {
             stories
         }
+    }
+}
+
+export async function getStaticPaths(){
+    return {
+        paths: [
+            { params: { "slug": "fields-of-plenty"} }
+        ],
+        fallback: false
     }
 }
 
