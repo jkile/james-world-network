@@ -11,11 +11,7 @@ import HomeIcon from "@material-ui/icons/Home";
 
 export default function Sidebar(props) {
     console.log(props)
-    const handleItemClick = e => {
-        console.log(e.target.id);
-        Router.push("/channel")
-        props.toggle();
-    }
+
 
     const drawer = (
         <div>
@@ -34,7 +30,7 @@ export default function Sidebar(props) {
                 </Box>
             </Box>
             <List>
-                {props.channels.map(item => <SidebarListItem onClick={handleItemClick} text={item.name} />)}
+                {props.channels.map(item => <SidebarListItem text={item.name} id={item.slug} />)}
             </List>
         </div>
     );
@@ -44,7 +40,9 @@ export default function Sidebar(props) {
             <Hidden lgUp>
                 <Box>
                     <Drawer open={props.open} variant="temporary">
-                        {drawer}
+                        <Box width="18rem">
+                            {drawer}
+                        </Box>
                     </Drawer>
                 </Box>
             </Hidden>
