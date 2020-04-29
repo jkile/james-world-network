@@ -10,9 +10,11 @@ import darkTheme from "../styles/theme";
 import Axios from 'axios';
 
 
-function Channel({ stories }) {
+function Channel(props) {
     const [openSidebar, setSidebar] = useState(false);
     const isNotMobile = useMediaQuery("(min-width: 1280px)");
+
+    console.log(props)
 
     const handleSidebarToggle = () => {
         setSidebar(!openSidebar);
@@ -23,8 +25,8 @@ function Channel({ stories }) {
             <CssBaseline />
             <Box >
                 <Nav toggle={handleSidebarToggle} isNotMobile={isNotMobile} />
-                <Sidebar open={openSidebar} toggle={handleSidebarToggle} isNotMobile={isNotMobile} channels={stories.stories}/>
-                <Channels  channel={stories.stories[0]}/>
+                <Sidebar open={openSidebar} toggle={handleSidebarToggle} isNotMobile={isNotMobile} channels={props.stories.stories}/>
+                <Channels  channel={props.story.story}/>
             </Box>
         </ThemeProvider>
     );
@@ -40,12 +42,16 @@ export async function getStaticPaths(){
     return { paths, fallback: false }
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({ params }) {
     const resAll = await Axios.get(`https://api.storyblok.com/v1/cdn/stories?version=published&token=${process.env.API_TOKEN}`);
     const stories = resAll.data
+
+    const resPage = await Axios.get(`https://api.storyblok.com/v1/cdn/stories/channel/${params.slug}?version=published&token=${process.env.API_TOKEN}`);
+    const story = resPage.data
     return {
         props: {
-            stories
+            stories,
+            story
         }
     }
 }
