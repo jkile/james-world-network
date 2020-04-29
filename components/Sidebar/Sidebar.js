@@ -10,8 +10,6 @@ import HomeIcon from "@material-ui/icons/Home";
 
 
 export default function Sidebar(props) {
-    console.log(props)
-
 
     const drawer = (
         <div>

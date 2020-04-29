@@ -30,10 +30,19 @@ function Channel({ stories }) {
     );
 }
 
+export async function getStaticPaths(){
+
+    const res = await Axios.get(`https://api.storyblok.com/v1/cdn/stories?version=published&token=${process.env.API_TOKEN}`);
+    
+    const paths = res.data.stories.map(item => ({
+        params: { "slug" : item.slug }
+    }))
+    return { paths, fallback: false }
+}
+
 export async function getStaticProps() {
     const resAll = await Axios.get(`https://api.storyblok.com/v1/cdn/stories?version=published&token=${process.env.API_TOKEN}`);
     const stories = resAll.data
-
     return {
         props: {
             stories
@@ -41,13 +50,5 @@ export async function getStaticProps() {
     }
 }
 
-export async function getStaticPaths(){
-    return {
-        paths: [
-            { params: { "slug": "fields-of-plenty"} }
-        ],
-        fallback: false
-    }
-}
 
 export default Channel;
