@@ -21,7 +21,7 @@ export default function Home(props) {
             <Grid container direction="row" justify="center" align="center">
 
                 <Grid container direction="row" justify="center" align="center" md={8} lg={8} xl={8}>
-                    <img src="./assets/JMWRODMUSICNEARFINAL2.png" alt="Jame World Network Logo" />
+                    <img src="./assets/JMWRODMUSICNEARFINAL2.png" alt="Jame World Network Logo" className={styles.headerLogo}/>
                     <Grid item xs={12}>
                         <Box m={1}>
                             <Paper elevation={3}>

@@ -14,11 +14,10 @@
     }
 }
 .headerLogo{
-    max-width: 22rem;
-    margin: auto;
-    max-height: 15rem;
+    max-width: 20rem;
+
     @media (min-width: 960px){
-        max-width: 35rem;
+        max-width: 45rem;
         max-height: 20rem;
     }
 }
