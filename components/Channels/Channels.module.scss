@@ -5,7 +5,14 @@
         left: 18rem;
         width: calc(100vw - 18.5rem)
     }
-    @media (min-width: 900px){
-        margin: .25rem;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+
+    figure{
+        margin-right: 1rem; 
     }
 }

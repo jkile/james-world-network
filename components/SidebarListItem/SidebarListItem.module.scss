@@ -1,0 +1,14 @@
+.item{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    figure{
+        margin-right: 1rem;
+    }
+}
+.item:hover{
+    
+}

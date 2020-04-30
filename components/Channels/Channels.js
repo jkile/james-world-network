@@ -1,66 +1,39 @@
 import React, { useEffect } from 'react';
-import { Grid, Paper, Typography, Box, Avatar } from '@material-ui/core';
 import YouTube from "react-youtube-embed";
 import styles from "./Channels.module.scss";
 import LiveFeed from '../LiveFeed/LiveFeed';
-import Axios from 'axios';
 
 export default function Channels(props) {
 
-    useEffect(() => {
-        // console.log(props)
-    }, [])
-
     return (
-        <div className={styles.main}>
-            <Grid container direction="row" justify="center" align="center">
-                <Grid item xs={12} sm={12} md={8} lg={8} xl={8}>
-                    <Box m={1}>
-                        <Paper>
-                            <Box display="flex" p={2}>
-                                <Box mr={3}>
-                                    <Avatar>
+        <section className={`section ${styles.main}`}>
+            <div className="columns">
+                <div className="column is-two-thirds">
+                    <div className="box has-background-link">
+                        <div className={styles.header}>
 
-                                    </Avatar>
-                                </Box>
-                                <Typography variant="h4" component="h2">
-                                    <Box fontWeight={700}>
-                                        {props.channel.content.title}
-                                    </Box>
-                                </Typography>
-                            </Box>
-                            <Box p={2}>
-                                <YouTube id={props.channel.content.video_url} />
-                            </Box>
-                        </Paper>
-                    </Box>
-                </Grid>
-                <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
-                    <Grid item xs={12}>
-                        <Box m={1}>
-                            <Paper>
-                                <Box p={2}>
-                                    <Typography variant="h4" component="h2">
-                                        <Box fontWeight={700} textAlign="left">
-                                            ABOUT
-                                        </Box>
-                                    </Typography>
-                                    <Typography variant="p" component="p">
-                                        <Box textAlign="left">
-                                            {props.channel.content.about}
-                                        </Box>  
-                                    </Typography>
-                                </Box>
-                            </Paper>
-                        </Box>
-                    </Grid>
-                    <Grid item xs={12}>
+                            <figure className="image is-48x48">
+                                <img className="is-rounded" src="https://bulma.io/images/placeholders/48x48.png" />
+                            </figure>
+
+                                <h3 className="is-size-3 has-text-weight-bold has-text-white">
+                                    {props.channel.content.title}
+                                </h3>
+                        </div>
+                            <YouTube id={props.channel.content.video_url} />
+                        </div>
+                    </div>
+                    <div className="column is-one-third-desktop">
+                        <div className="box has-background-link">
+                            <h3 className="is-size-3 has-text-weight-bold has-text-white">ABOUT</h3>
+                            <p className="is-size-6 has-text-white">
+                                {props.channel.content.about}
+                            </p>
+                        </div>
                         <LiveFeed />
-                    </Grid>
-                </Grid>
-
-            </Grid>
-        </div>
+                    </div>
+                </div>
+        </section>
     )
 }
 

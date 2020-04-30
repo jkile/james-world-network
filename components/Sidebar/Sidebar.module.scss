@@ -1,0 +1,24 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.sidebar{
+    height: calc(100vh - 2.75rem);
+    width: 18rem;
+    position: fixed;
+    z-index: 2;
+    transition: .3s;
+    padding-left: 1rem;
+
+    left: 0rem;
+}
+
+.hidden{
+    left: -20rem;
+    transition: .3s;
+}

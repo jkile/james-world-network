@@ -5,19 +5,12 @@
         left: 18rem;
         width: calc(100vw - 18.5rem)
     }
-    @media (min-width: 900px){
-        margin: .25rem;
-    }
-
-    img{
-        margin: .25rem;
-    }
 }
-.headerLogo{
-    max-width: 20rem;
+// .headerLogo{
+//     max-width: 20rem;
 
-    @media (min-width: 960px){
-        max-width: 45rem;
-        max-height: 20rem;
-    }
-}
+//     @media (min-width: 960px){
+//         max-width: 45rem;
+//         max-height: 20rem;
+//     }
+// }
