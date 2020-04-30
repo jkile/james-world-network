@@ -2,42 +2,35 @@ import React, { useState, useEffect } from 'react';
 import Nav from "../components/Nav/Nav";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Channels from "../components/Channels/Channels";
-import { ThemeProvider } from "@material-ui/core/styles";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Box from "@material-ui/core/Box";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import darkTheme from "../styles/theme";
+import { useMediaQuery } from 'react-responsive';
 import Axios from 'axios';
 
 
 function Channel(props) {
     const [openSidebar, setSidebar] = useState(false);
-    const isNotMobile = useMediaQuery("(min-width: 1280px)");
-
-    console.log(props)
+    const isNotMobile = useMediaQuery({query: "(min-width: 1280px)"});
 
     const handleSidebarToggle = () => {
         setSidebar(!openSidebar);
     }
 
     return (
-        <ThemeProvider theme={darkTheme}>
-            <CssBaseline />
-            <Box >
-                <Nav toggle={handleSidebarToggle} isNotMobile={isNotMobile} />
-                <Sidebar open={openSidebar} toggle={handleSidebarToggle} isNotMobile={isNotMobile} channels={props.stories.stories}/>
-                <Channels  channel={props.story.story}/>
-            </Box>
-        </ThemeProvider>
+        <div>
+            <Nav toggle={handleSidebarToggle} isNotMobile={isNotMobile} />
+            
+            <Sidebar open={openSidebar} toggle={handleSidebarToggle} isNotMobile={isNotMobile} channels={props.stories.stories} />
+            <Channels channel={props.story.story} />
+            {openSidebar && <div className="overlay" onClick={handleSidebarToggle}></div>}
+        </div>
     );
 }
 
-export async function getStaticPaths(){
+export async function getStaticPaths() {
 
     const res = await Axios.get(`https://api.storyblok.com/v1/cdn/stories?version=published&token=${process.env.API_TOKEN}`);
-    
+
     const paths = res.data.stories.map(item => ({
-        params: { "slug" : item.slug }
+        params: { "slug": item.slug }
     }))
     return { paths, fallback: false }
 }

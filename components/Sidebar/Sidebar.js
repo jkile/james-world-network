@@ -1,56 +1,32 @@
 import React from 'react';
-import Router from 'next/router';
 import Link from "next/link";
-import Drawer from "@material-ui/core/Drawer";
-import List from "@material-ui/core/List";
 import SidebarListItem from "../SidebarListItem/SidebarListItem";
-import { Box, Typography, Divider, IconButton } from "@material-ui/core";
-import Hidden from "@material-ui/core/Hidden";
-import HomeIcon from "@material-ui/icons/Home";
-
+import styles from "./Sidebar.module.scss";
 
 export default function Sidebar(props) {
+    console.log(props)
 
     const drawer = (
         <div>
-            <Box display="flex" justifyContent="space-between">
-                <Typography variant="h4" component="h2">
-                    <Box pl={2} pt={1.5} pb={0} fontWeight={700}>
-                        SHOWS
-                </Box>
-                </Typography>
-                <Box mr={1} pt={1}>
+            <div className={styles.header}>
+                <h3 className="is-size-3 has-text-weight-bold has-text-white">SHOWS</h3>
                     <Link href="/">
-                        <IconButton>
-                            <HomeIcon />
-                        </IconButton>
+                        <span className="icon has-text-white is-medium">
+                            <i className="fas fa-home fa-lg"></i>
+                        </span>
                     </Link>
-                </Box>
-            </Box>
-            <List>
+            </div>
+            <ul>
                 {props.channels.map(item => <SidebarListItem text={item.name} id={item.slug} />)}
-            </List>
+            </ul>
         </div>
     );
 
     return (
         <div>
-            <Hidden lgUp>
-                <Box>
-                    <Drawer open={props.open} variant="temporary">
-                        <Box width="18rem">
-                            {drawer}
-                        </Box>
-                    </Drawer>
-                </Box>
-            </Hidden>
-            <Hidden mdDown>
-                <Drawer open variant="permanent">
-                    <Box width="18rem">
-                        {drawer}
-                    </Box>
-                </Drawer>
-            </Hidden>
+            <aside className={`has-background-link ${styles.sidebar} ${props.open || props.isNotMobile ? {} : styles.hidden}`}>
+                {drawer}
+            </aside>
         </div>
     )
 }

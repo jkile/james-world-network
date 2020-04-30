@@ -1,29 +1,15 @@
 import React from 'react';
-import { Box, Paper, Typography, Card } from "@material-ui/core";
 
 export default function About() {
     return (
-        <Box m={1}>
-            <Card elevation={3}>
-                <Box p={2}>
-                    <Typography variant="h4" component="h2">
-                        <Box textAlign="left" fontWeight={700}>
-                            ABOUT
-                        </Box>
-                    </Typography>
-                    <Typography variant="p" component="p">
-                        <Box textAlign="left">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Autem asperiores eligendi rem laboriosam quisquam eius quo earum itaque, 
-                            quod saepe ex ducimus molestiae commodi cum rerum id odio quaerat aliquam sit sed incidunt reprehenderit quam illo. 
-                            Quis iure provident quibusdam, rerum corrupti vel veritatis quas vero fuga error! 
-                            Pariatur explicabo magnam culpa alias et suscipit ipsam! Eius alias porro amet possimus. 
-                            Quisquam, natus architecto fuga impedit mollitia eos, adipisci at reprehenderit modi ab quo voluptatum dolores praesentium iste unde consequatur quod nesciunt laboriosam animi, 
-                            quia blanditiis cum excepturi? Doloremque dignissimos expedita, blanditiis illo fugiat nesciunt recusandae officiis qui sed sit.
-                        </Box>
-                    </Typography>
-                </Box>
-            </Card>
-        </Box>
+        <div className="box has-background-link">
+            <h4 className="is-size-3 has-text-weight-bold has-text-white">ABOUT</h4>
+            <p className="is-size-6 has-text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Ad, quos mollitia nesciunt repellat molestiae dolore iste pariatur tempore ducimus voluptatem maiores et facilis, natus temporibus? 
+            Fugit, magni excepturi asperiores dicta assumenda blanditiis, veniam in vel minima animi illo quaerat repellendus esse. 
+            Veritatis illum quod dolorem quibusdam itaque, placeat ducimus, dolore quis quisquam nesciunt temporibus fuga dolores unde excepturi exercitationem? 
+            Voluptas sequi animi earum suscipit, voluptatum officiis quis natus dolorum quasi molestias blanditiis ratione corrupti id eius doloribus recusandae commodi nisi? Officia dolore molestias cupiditate perferendis accusamus, aperiam nesciunt. 
+            Officiis labore amet reiciendis error sequi dicta debitis repellendus, ipsum quaerat voluptate.</p>
+        </div>
     )
 }
