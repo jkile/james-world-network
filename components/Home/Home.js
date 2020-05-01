@@ -16,7 +16,9 @@ export default function Home(props) {
                     {/* <img src="./assets/JMWRODMUSICNEARFINAL2.png" alt="Jame World Network Logo" className={styles.headerLogo} /> */}
 
                     <div className="box has-background-primary">
-                        <TwitchStream channelName="jamesworldnetwork" allowFullScreen autoplay muted />
+    
+                            <TwitchStream channelName="jamesworldnetwork" allowFullScreen autoplay muted />
+                      
                     </div>
                     <About />
                 </div>
@@ -25,8 +27,6 @@ export default function Home(props) {
                     <LiveFeed />
                 </div>
             </div>
-
-            
         </section>
     )
 }
