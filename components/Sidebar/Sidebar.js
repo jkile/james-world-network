@@ -11,7 +11,7 @@ export default function Sidebar(props) {
             <div className={styles.header}>
                 <h3 className="is-size-3 has-text-weight-bold has-text-white">SHOWS</h3>
                     <Link href="/">
-                        <span className="icon has-text-white is-medium">
+                        <span className={`icon has-text-white is-medium ${styles.home}`}>
                             <i className="fas fa-home fa-lg"></i>
                         </span>
                     </Link>
@@ -24,7 +24,7 @@ export default function Sidebar(props) {
 
     return (
         <div>
-            <aside className={`has-background-link ${styles.sidebar} ${props.open || props.isNotMobile ? {} : styles.hidden}`}>
+            <aside className={`has-background-primary ${styles.sidebar} ${props.open || props.isNotMobile ? {} : styles.hidden}`}>
                 {drawer}
             </aside>
         </div>

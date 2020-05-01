@@ -1,5 +1,8 @@
 
-
+$info: #87F5FB;
+$danger: #DE3C4B;
+$primary: #393e46;
+$white: #EEEEEE;
 
 @import "bulma/sass/utilities/_all.sass";
 @import 'bulma/sass/base/_all.sass';
@@ -7,12 +10,14 @@
 @import "bulma/sass/layout/section.sass";
 @import "bulma/sass/elements/box.sass";
 @import "bulma/sass/elements/image.sass";
+@import "bulma/sass/elements/content.sass";
+@import "bulma/sass/elements/progress.sass";
 @import "bulma/sass/components/menu.sass";
 @import "bulma/sass/components/navbar.sass";
 @import "bulma/sass/grid/columns.sass";
 
 body{
-    background-color: $dark;
+    background-color: #222831;
     height: 100%;
     @media (min-width: 768px){
         height: 100vh

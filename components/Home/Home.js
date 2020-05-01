@@ -9,18 +9,30 @@ import LiveFeed from "../../components/LiveFeed/LiveFeed";
 
 export default function Home(props) {
 
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false)
+        }, 3000)
+    })
+
     return (
         <section className={`section ${styles.main}`}>
             <div className="columns">
-                <div className="column is-two-thirds-desktop">
+                <div className="column is-12 is-two-thirds-desktop">
                     {/* <img src="./assets/JMWRODMUSICNEARFINAL2.png" alt="Jame World Network Logo" className={styles.headerLogo} /> */}
 
-                    <div className="box has-background-link">
-                        <TwitchStream channelName="jamesworldnetwork" allowFullScreen autoplay muted />
+                    <div className="box has-background-primary">
+                        {loading ?
+                            <progress class="progress is-large is-info" max="100"></progress>
+                            :
+                            <TwitchStream channelName="jamesworldnetwork" allowFullScreen autoplay muted />
+                        }
                     </div>
                     <About />
                 </div>
-                <div className="column is-one-third-desktop">
+                <div className="column is-12 is-one-third-desktop">
                     <UpNext isNotMobile={props.isNotMobile} />
                     <LiveFeed />
                 </div>
