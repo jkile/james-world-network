@@ -12,12 +12,12 @@
     "bulma": "^0.8.2",
     "bulma-pageloader": "^0.3.0",
     "dotenv": "^8.2.0",
+    "framer-motion": "^1.10.3",
     "next": "9.3.5",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-responsive": "^8.0.3",
     "react-twitch-stream": "^1.0.4",
-    "react-youtube-embed": "^1.0.3",
     "sass": "^1.26.5"
   }
 }

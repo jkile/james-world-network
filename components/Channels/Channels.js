@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import YouTube from "react-youtube-embed";
+import YouTubeEmbed from "../YouTubeEmbed/YouTubeEmbed";
 import styles from "./Channels.module.scss";
 import LiveFeed from '../LiveFeed/LiveFeed';
 
@@ -20,7 +20,7 @@ export default function Channels(props) {
                                     {props.channel.content.title}
                                 </h3>
                         </div>
-                            <YouTube id={props.channel.content.video_url} />
+                            <YouTubeEmbed id={props.channel.content.video_url} />
                         </div>
                     </div>
                     <div className="column is-one-third-desktop">
