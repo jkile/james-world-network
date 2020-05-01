@@ -15,12 +15,14 @@
     position: fixed;
     z-index: 2;
     transition: .3s;
-
-    left: 0rem;
+    left: -20rem;
+    @media(min-width: 1280px){
+        left: 0rem;
+    }
 }
 
-.hidden{
-    left: -20rem;
+.reveal{
+    left: 0rem;
     transition: .3s;
 }
 
