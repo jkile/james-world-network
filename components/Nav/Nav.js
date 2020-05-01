@@ -3,7 +3,7 @@ import React from 'react'
 export default function Nav(props) {
 
     return (
-        <nav class="navbar has-background-link" role="navigation" aria-label="main navigation">
+        <nav class="navbar has-background-danger" role="navigation" aria-label="main navigation">
             <div className="navbar-item">
                 {!props.isNotMobile &&
                     <div className="navbar-item">

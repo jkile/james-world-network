@@ -9,7 +9,7 @@ export default function Channels(props) {
         <section className={`section ${styles.main}`}>
             <div className="columns">
                 <div className="column is-two-thirds">
-                    <div className="box has-background-link">
+                    <div className="box has-background-primary">
                         <div className={styles.header}>
 
                             <figure className="image is-48x48">
@@ -24,7 +24,7 @@ export default function Channels(props) {
                         </div>
                     </div>
                     <div className="column is-one-third-desktop">
-                        <div className="box has-background-link">
+                        <div className="box has-background-primary">
                             <h3 className="is-size-3 has-text-weight-bold has-text-white">ABOUT</h3>
                             <p className="is-size-6 has-text-white">
                                 {props.channel.content.about}
