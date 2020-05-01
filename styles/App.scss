@@ -15,6 +15,7 @@ $white: #EEEEEE;
 @import "bulma/sass/components/menu.sass";
 @import "bulma/sass/components/navbar.sass";
 @import "bulma/sass/grid/columns.sass";
+@import "~bulma-pageloader";
 
 body{
     background-color: #222831;

@@ -14,7 +14,7 @@ export default function Home(props) {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
-        }, 3000)
+        }, 2000)
     })
 
     return (
@@ -25,7 +25,7 @@ export default function Home(props) {
 
                     <div className="box has-background-primary">
                         {loading ?
-                            <progress class="progress is-large is-info" max="100"></progress>
+                            <progress class="progress is-large is-danger" max="100"></progress>
                             :
                             <TwitchStream channelName="jamesworldnetwork" allowFullScreen autoplay muted />
                         }
@@ -37,6 +37,8 @@ export default function Home(props) {
                     <LiveFeed />
                 </div>
             </div>
+
+            <div class={`pageloader has-background-danger is-top-to-bottom ${loading ? "is-active" : {}}`}><span class="title is-size-3">Welcome to the Network</span></div>
         </section>
     )
 }
