@@ -4,7 +4,6 @@ import "../styles/App.scss";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
 
-
 export default function MyApp({ Component, pageProps }) {
 
     const [loading, setLoading] = useState(true);
@@ -26,7 +25,7 @@ export default function MyApp({ Component, pageProps }) {
             </Head>
             <Component {...pageProps} />
             <div class={`pageloader has-background-danger is-top-to-bottom ${loading ? "is-active" : {}}`}>
-                <span class="title is-size-3">Welcome to the Network</span>
+                <span class={"title is-size-1"}>Welcome to the Network</span>
             </div>
         </div>
     )
