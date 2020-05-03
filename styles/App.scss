@@ -3,6 +3,7 @@ $info: #87F5FB;
 $danger: #DE3C4B;
 $primary: #393e46;
 $white: #EEEEEE;
+$dark: #222831;
 
 @import "bulma/sass/utilities/_all.sass";
 @import 'bulma/sass/base/_all.sass';
@@ -19,10 +20,7 @@ $white: #EEEEEE;
 
 body{
     background-color: #222831;
-    height: 100%;
-    @media (min-width: 768px){
-        height: 100vh
-    }
+    height: 100vh;
 }
 
 .overlay{
@@ -35,3 +33,4 @@ body{
     top: 0;
     left: 0;
 }
+

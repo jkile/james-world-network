@@ -26,7 +26,8 @@ function App({ stories }) {
 }
 
 export async function getStaticProps() {
-  const resAll = await Axios.get(`https://api.storyblok.com/v1/cdn/stories?version=published&token=${process.env.API_TOKEN}`);
+  const date = new Date(0);
+  const resAll = await Axios.get(`https://api.storyblok.com/v1/cdn/stories?cv=${date}version=published&token=${process.env.API_TOKEN}`);
   const stories = resAll.data
 
   return {

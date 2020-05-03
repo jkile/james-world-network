@@ -1,0 +1,31 @@
+.thumbnail{
+    width: 250px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: inset 0 0 40px #000000;
+}
+
+.videoContainer{
+    width: 250px;
+    padding-top: 0rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    transition: .3s;
+}
+
+.videoContainer:hover{
+    transform: translateY(-5px);
+    transform: scale(1.05)
+}
+.videoContainer:active{
+    transform: translateY(5px);
+    transform: scale(.95);
+}
+.title{
+    margin-top: -.5rem;
+    padding-left: .25rem;
+}
+.date{
+    padding-left: .35rem;
+    margin-top: -.25rem;
+}

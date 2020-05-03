@@ -2,13 +2,15 @@ import React, { useEffect } from 'react';
 import YouTubeEmbed from "../YouTubeEmbed/YouTubeEmbed";
 import styles from "./Channels.module.scss";
 import LiveFeed from '../LiveFeed/LiveFeed';
+import PreviousVideos from '../PreviousVideos/PreviousVideos';
 
 export default function Channels(props) {
 
     return (
-        <section className={`section ${styles.main}`}>
-            <div className="columns">
-                <div className="column is-two-thirds">
+        <section className={`section ${styles.main} has-background-dark`}>
+
+            <div className="columns is-multiline">
+                <div className="column is-two-thirds is-7-fullhd">
                     <div className="box has-background-primary">
                         <div className={styles.header}>
 
@@ -16,23 +18,27 @@ export default function Channels(props) {
                                 <img className="is-rounded" src="https://bulma.io/images/placeholders/48x48.png" />
                             </figure>
 
-                                <h3 className="is-size-3 has-text-weight-bold has-text-white">
-                                    {props.channel.content.title}
-                                </h3>
+                            <h3 className="is-size-3 has-text-weight-bold has-text-white">
+                                {props.channel.content.title}
+                            </h3>
                         </div>
-                            <YouTubeEmbed id={props.channel.content.video_url} />
-                        </div>
-                    </div>
-                    <div className="column is-one-third-desktop">
-                        <div className="box has-background-primary">
-                            <h3 className="is-size-3 has-text-weight-bold has-text-white">ABOUT</h3>
-                            <p className="is-size-6 has-text-white">
-                                {props.channel.content.about}
-                            </p>
-                        </div>
-                        <LiveFeed />
+                        <YouTubeEmbed id={props.channel.content.video_url} />
                     </div>
                 </div>
+                <div className="column is-one-third-desktop is-5-fullhd">
+                    <div className="box has-background-primary">
+                        <h3 className="is-size-3 has-text-weight-bold has-text-white">ABOUT</h3>
+                        <p className="is-size-6 has-text-white">
+                            {props.channel.content.about}
+                        </p>
+                    </div>
+                    <LiveFeed />
+                </div>
+                <div className="column is-12">
+                    <PreviousVideos />
+                </div>
+            </div>
+
         </section>
     )
 }

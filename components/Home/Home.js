@@ -10,15 +10,16 @@ import LiveFeed from "../../components/LiveFeed/LiveFeed";
 export default function Home(props) {
 
     return (
-        <section className={`section ${styles.main}`}>
-            <div className="columns">
+        
+        <section className={`section ${styles.main} has-background-dark`}>
+            <div className="columns is-multiline">
                 <div className="column is-12 is-two-thirds-desktop">
                     {/* <img src="./assets/JMWRODMUSICNEARFINAL2.png" alt="Jame World Network Logo" className={styles.headerLogo} /> */}
 
                     <div className="box has-background-primary">
-    
-                            <TwitchStream channelName="jamesworldnetwork" allowFullScreen autoplay muted />
-                      
+
+                        <TwitchStream channelName="jamesworldnetwork" allowFullScreen autoplay muted />
+
                     </div>
                     <About />
                 </div>
@@ -28,5 +29,6 @@ export default function Home(props) {
                 </div>
             </div>
         </section>
+       
     )
 }

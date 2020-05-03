@@ -26,8 +26,8 @@ function Channel(props) {
 }
 
 export async function getStaticPaths() {
-
-    const res = await Axios.get(`https://api.storyblok.com/v1/cdn/stories?version=published&token=${process.env.API_TOKEN}`);
+    const date = new Date(0);
+    const res = await Axios.get(`https://api.storyblok.com/v1/cdn/stories?cv=${date}version=published&token=${process.env.API_TOKEN}`);
 
     const paths = res.data.stories.map(item => ({
         params: { "slug": item.slug }
@@ -36,10 +36,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const resAll = await Axios.get(`https://api.storyblok.com/v1/cdn/stories?version=published&token=${process.env.API_TOKEN}`);
+
+    const date = new Date(0);
+
+    const resAll = await Axios.get(`https://api.storyblok.com/v1/cdn/stories?cv=${date}version=published&token=${process.env.API_TOKEN}`);
     const stories = resAll.data
 
-    const resPage = await Axios.get(`https://api.storyblok.com/v1/cdn/stories/channel/${params.slug}?version=published&token=${process.env.API_TOKEN}`);
+    const resPage = await Axios.get(`https://api.storyblok.com/v1/cdn/stories/channel/${params.slug}?cv=${date}version=published&token=${process.env.API_TOKEN}`);
     const story = resPage.data
     return {
         props: {
