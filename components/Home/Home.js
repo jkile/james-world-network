@@ -16,7 +16,7 @@ export default function Home(props) {
                 <div className="column is-12 is-two-thirds-desktop">
                     {/* <img src="./assets/JMWRODMUSICNEARFINAL2.png" alt="Jame World Network Logo" className={styles.headerLogo} /> */}
 
-                    <div className="box has-background-primary">
+                    <div className="box has-background-dark">
 
                         <TwitchStream channelName="jamesworldnetwork" allowFullScreen autoplay muted />
 

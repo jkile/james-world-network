@@ -5,7 +5,7 @@ export default function UpNext(props) {
 
 
     return (
-        <div className="box has-background-primary">
+        <div className="box has-background-dark">
 
             <h3 className="is-size-3 has-text-weight-bold has-text-white">UP NEXT</h3>
             <div className={`box has-background-danger ${styles.nextItem}`}>
