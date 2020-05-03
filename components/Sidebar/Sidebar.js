@@ -23,7 +23,7 @@ export default function Sidebar(props) {
 
     return (
         <div>
-            <aside className={`has-background-primary ${styles.sidebar} ${props.open ? styles.reveal : {}}`}>
+            <aside className={`has-background-dark box ${styles.sidebar} ${props.open ? styles.reveal : {}}`}>
                 {drawer}
             </aside>
         </div>

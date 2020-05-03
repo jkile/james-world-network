@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function About() {
     return (
-        <div className="box has-background-primary">
+        <div className="box has-background-dark">
             <div className="content is-medium">
             <p className="is-medium has-text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Ad, quos mollitia nesciunt repellat molestiae dolore iste pariatur tempore ducimus voluptatem maiores et facilis, natus temporibus? 
