@@ -16,7 +16,7 @@ export default function Sidebar(props) {
                     </Link>
             </div>
             <ul>
-                {props.channels.map(item => <SidebarListItem text={item.name} id={item.slug} avatar={item.content.avatar}/>)}
+                {props.channels.map(item => <SidebarListItem text={item.name} slug={item.slug} avatar={item.content.avatar}/>)}
             </ul>
         </div>
     );

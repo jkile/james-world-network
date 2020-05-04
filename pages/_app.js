@@ -11,7 +11,7 @@ export default function MyApp({ Component, pageProps }) {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
-        }, 2000)
+        }, 1500)
     })
 
     return (
@@ -23,7 +23,7 @@ export default function MyApp({ Component, pageProps }) {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
             </Head>
-            <Component {...pageProps} />
+                <Component {...pageProps} />
             <div class={`pageloader has-background-danger is-top-to-bottom ${loading ? "is-active" : {}}`}>
                 <span class={"title is-size-1"}>Welcome to the Network</span>
             </div>

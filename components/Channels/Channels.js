@@ -12,6 +12,11 @@ export default function Channels(props) {
             <div className="columns is-multiline">
                 <div className="column is-two-thirds is-7-fullhd">
                     <div className="box has-background-dark">
+                        <YouTubeEmbed id={props.channel.video_url} />
+                    </div>
+                </div>
+                <div className="column is-one-third-desktop is-5-fullhd">
+                    <div className="box has-background-dark">
                         <div className={styles.header}>
 
                             <figure className="image is-48x48">
@@ -19,17 +24,11 @@ export default function Channels(props) {
                             </figure>
 
                             <h3 className="is-size-3 has-text-weight-bold has-text-white">
-                                {props.channel.content.title}
+                                {props.channel.title}
                             </h3>
                         </div>
-                        <YouTubeEmbed id={props.channel.content.video_url} />
-                    </div>
-                </div>
-                <div className="column is-one-third-desktop is-5-fullhd">
-                    <div className="box has-background-dark">
-                        <h3 className="is-size-3 has-text-weight-bold has-text-white">ABOUT</h3>
                         <p className="is-size-6 has-text-white">
-                            {props.channel.content.about}
+                            {props.channel.about}
                         </p>
                     </div>
                     <LiveFeed />

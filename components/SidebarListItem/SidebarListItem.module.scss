@@ -1,15 +1,25 @@
 .item{
-    display: flex;
-    flex-direction: row;
+    // display: flex;
+    // flex-direction: row;
     cursor: pointer;
-    align-items: center;
-    padding-top: .5rem;
+    // align-items: center;
+    // padding-top: .5rem;
+    // padding-bottom: .5rem;
+    // padding-left: 1rem;
+    padding: 0rem;
     padding-bottom: .5rem;
-    padding-left: 1rem;
     transition: .3s;
     figure{
         margin-right: 1rem;
     }
+}
+.avatar{
+    padding: .5rem;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    width: 18rem;
+    height: auto;
+    
 }
 .item:hover{
     transform: scale(1.05);
@@ -22,6 +32,7 @@
 }
 
 .title{
-    //  text-shadow: 0px 0px 6px rgb(165, 42, 55);
-
+    // text-shadow: 0px 0px 6px rgb(165, 42, 55);
+    margin-top: 2rem;
+    padding-left: .5rem;
 }
