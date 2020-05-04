@@ -1,10 +1,11 @@
 
 
 $info: #87F5FB;
-$danger: #DE3C4B;
+$danger: #2BCED6;
 $primary: #393e46;
 $white: #EEEEEE;
 $dark: #222831;
+
 
 @import "bulma/sass/utilities/_all.sass";
 @import 'bulma/sass/base/_all.sass';
@@ -28,7 +29,7 @@ body{
 
 .overlay{
     opacity: .5;
-    background-color: black;
+    background-color: #222831;
     z-index: 1;
     height: 100vh;
     width: 100vw;
@@ -44,5 +45,7 @@ body{
 
 .card{
     border-radius: 5px;
+    box-shadow:  8px 8px 21px #171c22, 
+
 }
 
