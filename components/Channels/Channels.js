@@ -19,9 +19,9 @@ export default function Channels(props) {
                     <div className="box has-background-dark">
                         <div className={styles.header}>
 
-                            <figure className="image is-48x48">
+                            {/* <figure className="image is-48x48">
                                 <img className="is-rounded" src="https://bulma.io/images/placeholders/48x48.png" />
-                            </figure>
+                            </figure> */}
 
                             <h3 className="is-size-3 has-text-weight-bold has-text-white">
                                 {props.channel.title}
