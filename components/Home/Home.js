@@ -25,7 +25,7 @@ export default function Home(props) {
                 </div>
                 <div className="column is-12 is-one-third-desktop">
                     <UpNext isNotMobile={props.isNotMobile} />
-                    <LiveFeed />
+                    {/* <LiveFeed /> */}
                 </div>
             </div>
         </section>

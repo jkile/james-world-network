@@ -15,7 +15,7 @@ export default function MyApp({ Component, pageProps }) {
     })
 
     return (
-        <div>
+        <div className="has-background-dark">
             <Head>
                 <title>
                     James World Network

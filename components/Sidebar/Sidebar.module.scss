@@ -10,19 +10,27 @@
 }
 
 .sidebar{
-    height: calc(100vh - 2.75rem);
+    height: calc(100vh - 7.75rem);
     width: 20rem;
     position: fixed;
     z-index: 2;
     transition: .3s;
     left: -20rem;
+    top: 6.25rem;
+    overflow: auto;
+    scrollbar-width: none;
     @media(min-width: 1280px){
-        left: 0rem;
+        left: 2rem;
     }
 }
+.sidebar::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
 
 .reveal{
-    left: 0rem;
+    left: 2rem;
     transition: .3s;
 }
 
