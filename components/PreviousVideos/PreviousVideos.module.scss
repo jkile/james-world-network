@@ -1,3 +1,9 @@
 .overflow{
     overflow: auto;
+    scrollbar-width: none;
+}
+
+.overflow::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }

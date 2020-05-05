@@ -9,7 +9,7 @@ export default function SidebarListItem(props) {
     
                     <img className={`${styles.avatar}`} src={props.avatar} />
      
-                <h4 className={`has-text-danger has-text-weight-bold ${styles.title}`}>{props.text}</h4>
+                <h4 className={`has-text-danger has-text-weight-bold is-size-5 ${styles.title}`}>{props.text}</h4>
             </li>
         </Link>
     )

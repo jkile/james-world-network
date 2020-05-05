@@ -10,12 +10,14 @@ export default function Channels(props) {
         <section className={`section ${styles.main} has-background-dark`}>
 
             <div className="columns is-multiline">
-                <div className="column is-two-thirds is-7-fullhd">
+                {/* <div className="column is-two-thirds is-7-fullhd"> */}
+                <div className="column is-full">
                     <div className="box has-background-dark">
                         <YouTubeEmbed id={props.channel.video_url} />
                     </div>
                 </div>
-                <div className="column is-one-third-desktop is-5-fullhd">
+                {/* <div className="column is-one-third-desktop is-5-fullhd"> */}
+                <div className="column is-full">
                     <div className="box has-background-dark">
                         <div className={styles.header}>
 
@@ -31,7 +33,7 @@ export default function Channels(props) {
                             {props.channel.about}
                         </p>
                     </div>
-                    <LiveFeed />
+                    {/* <LiveFeed /> */}
                 </div>
                 <div className="column is-12">
                     <PreviousVideos />
