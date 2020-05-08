@@ -19,7 +19,7 @@ function Channel(props) {
         <div>
             <Nav toggle={handleSidebarToggle} isNotMobile={isNotMobile} />
 
-            <Sidebar open={openSidebar} toggle={handleSidebarToggle} isNotMobile={isNotMobile} channels={props.data.ChannelItems.items} />
+            <Sidebar open={openSidebar} toggle={() => setSidebar(false)} isNotMobile={isNotMobile} channels={props.data.ChannelItems.items} />
             <Channels channel={props.data.ChannelItem.content} />
             {openSidebar && <div className="overlay" onClick={handleSidebarToggle}></div>}
         </div>
@@ -53,7 +53,7 @@ export async function getStaticProps({ params }) {
             name
             slug
             content{
-              avatar
+              video_url
             }
           }
         }
