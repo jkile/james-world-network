@@ -4,7 +4,7 @@ import SidebarListItem from "../SidebarListItem/SidebarListItem";
 import styles from "./Sidebar.module.scss";
 
 export default function Sidebar(props) {
-
+    console.log(props)
     const drawer = (
         <div>
             <div className={styles.header}>
@@ -16,7 +16,7 @@ export default function Sidebar(props) {
                     </Link>
             </div>
             <ul>
-                {props.channels.map(item => <SidebarListItem text={item.name} slug={item.slug} avatar={item.content.avatar}/>)}
+                {props.channels.map(item => <SidebarListItem text={item.name} slug={item.slug} avatar={item.content.video_url} toggle={props.toggle}/>)}
             </ul>
         </div>
     );

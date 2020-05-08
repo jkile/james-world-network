@@ -36,7 +36,7 @@ export default function Channels(props) {
                     {/* <LiveFeed /> */}
                 </div>
                 <div className="column is-12">
-                    <PreviousVideos />
+                    {/* <PreviousVideos /> */}
                 </div>
             </div>
 

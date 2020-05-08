@@ -16,7 +16,7 @@ function App({ data }) {
   return (
     <>
       <Nav toggle={handleSidebarToggle} isNotMobile={isNotMobile} />
-      <Sidebar open={openSidebar} toggle={handleSidebarToggle} isNotMobile={isNotMobile} channels={data.ChannelItems.items} />
+      <Sidebar open={openSidebar} toggle={() => setSidebar(false)} isNotMobile={isNotMobile} channels={data.ChannelItems.items} />
       <Home isNotMobile={isNotMobile} />
       {openSidebar && <div className="overlay" onClick={handleSidebarToggle}></div>}
     </>
@@ -40,7 +40,7 @@ export async function getStaticProps() {
         name
         slug
         content{
-          avatar
+          video_url
         }
       }
     }
