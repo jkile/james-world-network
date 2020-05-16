@@ -9,43 +9,37 @@ export default function UpNext(props) {
             name: "Ark After Dark",
             day: 5,
             order: 1,
-            time: "9:00 PM"
+            time: "8:00 PM PST/11:00 PM EST"
         },
         {
             name: "Wow! Look at That Food!",
             day: 6,
             order: 1,
-            time: "8:00 PM"
+            time: "8:00 PM PST/11:00 PM EST"
         },
         {
             name: "James World Tonight",
             day: 6,
             order: 2,
-            time: "9:00 PM"
+            time: "9:00 PM PST/12:00 EST"
         },
         {
             name: "Goodnight Nate",
             day: 1,
             order: 1,
-            time: "9:00 PM"
+            time: "9:00 PM PST/12:00 EST"
         },
         {
             name: "Workters Winshop",
             day: 2,
             order: 1,
-            time: "8:00 PM"
+            time: "8:00 PM PST/11:00 EST"
         },
         {
-            name: "Ex/Perts",
+            name: "Ex/Perts PST",
             day: 4,
             order: 1,
-            time: "8:00 PM"
-        },
-        {
-            name: "Escape from Orin's Tavern",
-            day: 4,
-            order: 2,
-            time: "9:00 PM"
+            time: "8:00 PM PST/11:00 EST"
         }
 
     ]
